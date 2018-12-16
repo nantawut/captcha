@@ -10,5 +10,9 @@ func Captcha(pattern int, leftOperand int, operator int, rightOperand int) strin
 		return strconv.Itoa(leftOperand) + " + " + numWords[rightOperand-1]
 	}
 
+	if pattern == 1 && operator == 2 {
+		return strconv.Itoa(leftOperand) + " - " + numWords[rightOperand-1]
+	}
+
 	return ""
 }
