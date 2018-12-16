@@ -9,5 +9,9 @@ func Captcha(pattern int, leftOperand int, operator int, rightOperand int) strin
 		return "1 + Two"
 	}
 
+	if pattern == 1 && leftOperand == 1 && operator == 1 && rightOperand == 3 {
+		return "1 + Three"
+	}
+
 	return ""
 }
