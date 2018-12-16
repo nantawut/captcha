@@ -61,3 +61,18 @@ func TestCaptcha_GivePattern_1_LeftOperand_2_Operator_2_RightOperand_4_Return2Su
 		t.Errorf("It should be %q but get to %q", expected, actual)
 	}
 }
+
+func TestCaptcha_GivePattern_2_LeftOperand_9_Operator_3_RightOperand_9_ReturnNineMultiple9(t *testing.T) {
+	pattern := 2
+	leftOperand := 9
+	operator := 3
+	rightOperand := 9
+
+	expected := "Nine x 9"
+
+	actual := Captcha(pattern, leftOperand, operator, rightOperand)
+
+	if expected != actual {
+		t.Errorf("It should be %q but get to %q", expected, actual)
+	}
+}
