@@ -16,5 +16,9 @@ func Captcha(pattern int, leftOperand int, operator int, rightOperand int) strin
 		result = numWords[leftOperand-1] + operators[operator-1] + strconv.Itoa(rightOperand)
 	}
 
+	if pattern == 3 {
+		result = "Pattern not found"
+	}
+
 	return result
 }

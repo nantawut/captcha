@@ -76,3 +76,18 @@ func TestCaptcha_GivePattern_2_LeftOperand_9_Operator_3_RightOperand_9_ReturnNin
 		t.Errorf("It should be %q but get to %q", expected, actual)
 	}
 }
+
+func TestCaptcha_GivePattern_3_ReturnsErrorPatternNotFound(t *testing.T) {
+	pattern := 3
+	leftOperand := 1
+	operator := 1
+	rightOperand := 1
+
+	expected := "Pattern not found"
+
+	actual := Captcha(pattern, leftOperand, operator, rightOperand)
+
+	if expected != actual {
+		t.Errorf("It should be %q but get to %q", expected, actual)
+	}
+}
