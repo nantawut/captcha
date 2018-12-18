@@ -15,8 +15,12 @@ func Captcha(pattern int, leftOperand int, operator int, rightOperand int) strin
 		return "Pattern not found"
 	}
 
-	if operator > 3 {
+	if operator == 0 || operator > len(operators) {
 		return "Operator not found"
+	}
+
+	if leftOperand == 0 || leftOperand > len(numWords) {
+		return "Left operand not found"
 	}
 
 	if pattern == 1 {
